@@ -1,85 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Catálogo CookieMonster Sports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+<title>CookieMonster Sports</title>
 
-body{
-    font-family:Arial;
-    background:#f4f4f4;
-    margin:40px;
-}
-
-h1{
-    text-align:center;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-
-}
-
-.card img{
-
-width:100%;
-
-}
-
-.card h3{
-
-padding:15px;
-
-text-align:center;
-
-}
-
-</style>
+<link rel="stylesheet" href="css/estilos.css">
 
 </head>
 
 <body>
 
+<header>
+
 <h1>CookieMonster Sports</h1>
 
-<div class="grid">
+<input
+type="text"
+placeholder="Buscar camiseta..."
+id="buscar">
 
-<div class="card">
+</header>
 
-<img src="https://picsum.photos/400/500">
+<main>
 
-<h3>Real Madrid Home Player</h3>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/401/500">
-
-<h3>Barcelona Away Fan</h3>
+<div id="catalogo">
 
 </div>
 
-<div class="card">
+</main>
 
-<img src="https://picsum.photos/402/500">
-
-<h3>México Local Mujer</h3>
-
-</div>
-
-</div>
+<script src="js/app.js"></script>
 
 </body>
 
