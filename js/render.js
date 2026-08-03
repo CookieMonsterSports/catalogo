@@ -2,13 +2,14 @@
 =====================================================
 Cookie Monster Sports
 Archivo: render.js
-Versión: 0.3
+Versión: 0.4
 =====================================================
 */
 
+
 /**
- * Convierte un texto tipo "club-america"
- * en "Club America".
+ * Convierte valores internos del JSON
+ * en texto legible.
  */
 function formatearTexto(texto) {
 
@@ -26,12 +27,33 @@ function formatearTexto(texto) {
 
 
 /**
- * Crea el HTML de una tarjeta.
+ * Genera la etiqueta de producto destacado.
+ */
+function mostrarDestacado(producto) {
+
+    if (!producto.destacado) {
+        return "";
+    }
+
+    return `
+        <span class="etiqueta-destacado">
+            ⭐ Destacado
+        </span>
+    `;
+
+}
+
+
+/**
+ * Crea una tarjeta individual.
  */
 function crearTarjeta(producto) {
 
     return `
+
         <article class="tarjeta">
+
+            ${mostrarDestacado(producto)}
 
             <img
                 src="${producto.imagenPrincipal}"
@@ -40,63 +62,95 @@ function crearTarjeta(producto) {
                 onerror="this.src='img/placeholder.webp'"
             >
 
+
             <div class="tarjeta-contenido">
 
-                <h2>${producto.nombre}</h2>
 
-                <p>
-                    <strong>Equipo:</strong>
-                    ${formatearTexto(producto.equipo)}
-                </p>
+                <h2>
+                    ${producto.nombre}
+                </h2>
 
-                <p>
-                    <strong>Categoría:</strong>
-                    ${formatearTexto(producto.categoria)}
-                </p>
 
-                <p>
-                    <strong>Versión:</strong>
-                    ${formatearTexto(producto.version)}
-                </p>
+                <div class="informacion-producto">
 
-                <p>
-                    <strong>Temporada:</strong>
-                    ${producto.temporada}
-                </p>
+
+                    <p>
+                        ⚽ 
+                        ${formatearTexto(producto.equipo)}
+                    </p>
+
+
+                    <p>
+                        👕 
+                        ${formatearTexto(producto.marca)}
+                        |
+                        ${formatearTexto(producto.version)}
+                    </p>
+
+
+                    <p>
+                        📅 
+                        Temporada ${producto.temporada}
+                    </p>
+
+
+                    <p>
+                        👤 
+                        ${formatearTexto(producto.genero)}
+                    </p>
+
+
+                    <p>
+                        📏 
+                        Tallas:
+                        ${producto.tallas.join(", ")}
+                    </p>
+
+
+                </div>
+
 
             </div>
 
         </article>
+
     `;
 
 }
 
 
 /**
- * Dibuja todas las tarjetas.
+ * Renderiza la lista completa.
  */
 function renderizarProductos(listaProductos) {
+
 
     const catalogo =
         document.getElementById("catalogo");
 
+
     if (!catalogo) return;
+
 
     if (listaProductos.length === 0) {
 
         catalogo.innerHTML = `
+
             <p class="mensaje-vacio">
                 No se encontraron productos.
             </p>
+
         `;
 
         return;
 
     }
 
+
     catalogo.innerHTML =
         listaProductos
             .map(crearTarjeta)
             .join("");
+
 
 }
