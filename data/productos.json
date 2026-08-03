@@ -21,12 +21,14 @@
       "XL"
     ],
 
-    "imagenPrincipal": "img/productos/AME-2025-H-FAN-001-1.webp",
+    "imagenPrincipal": "img/productos/america-local-2025-fan/01.webp",
 
     "galeria": [
-      "img/productos/AME-2025-H-FAN-001-1.webp",
-      "img/productos/AME-2025-H-FAN-001-2.webp",
-      "img/productos/AME-2025-H-FAN-001-3.webp"
+    "img/productos/america-local-2025-fan/01.webp",
+    "img/productos/america-local-2025-fan/02.webp",
+    "img/productos/america-local-2025-fan/03.webp",
+    "img/productos/america-local-2025-fan/04.webp",
+    "img/productos/america-local-2025-fan/tallas.webp"
     ],
 
     "destacado": true,
