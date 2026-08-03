@@ -1,1 +1,42 @@
+{
+  "categorias": {
+    "jersey": "Jersey",
+    "short": "Short",
+    "pants": "Pants",
+    "chamarra": "Chamarra",
+    "gorra": "Gorra",
+    "balon": "Balón",
+    "mochila": "Mochila"
+  },
 
+  "deportes": {
+    "futbol": "Fútbol",
+    "nba": "NBA",
+    "nfl": "NFL",
+    "mlb": "MLB"
+  },
+
+  "generos": {
+    "hombre": "Hombre",
+    "mujer": "Mujer",
+    "nino": "Niño",
+    "unisex": "Unisex"
+  },
+
+  "versiones": {
+    "fan": "Fan",
+    "player": "Player",
+    "retro": "Retro"
+  },
+
+  "marcas": {
+    "nike": "Nike",
+    "adidas": "Adidas",
+    "puma": "Puma",
+    "new-era": "New Era"
+  },
+
+  "equipos": {
+    "club-america": "Club América"
+  }
+}
