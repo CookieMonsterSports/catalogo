@@ -450,7 +450,68 @@ button{
 
 }
 
+/* =====================================================
+   INFORMACIÓN DEL PRODUCTO
+===================================================== */
 
+.informacion-producto{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:16px;
+
+}
+
+
+.informacion-producto p{
+
+    margin:0;
+
+    font-size:.95rem;
+
+    color:var(--color-secundario);
+
+}
+
+
+/* =====================================================
+   ETIQUETA DESTACADO
+===================================================== */
+
+.etiqueta-destacado{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    background:#222;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+    z-index:2;
+
+}
+
+
+.tarjeta{
+
+    position:relative;
+
+}
 /* =====================================================
    FIN DEL ARCHIVO
 ===================================================== */
