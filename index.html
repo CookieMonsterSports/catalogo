@@ -1,80 +1,78 @@
+<!--
+CMS Catalog
+Versión: 0.3
+-->
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Cookie Monster Sports</title>
 
-    <title>CookieMonster Sports</title>
+    <meta name="description" content="Catálogo deportivo de Cookie Monster Sports">
 
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
 
-    <header>
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
 
-        <div class="logo">
+    <header class="encabezado">
 
-            <img src="img/logo.png"
-                 alt="Logo CookieMonster Sports">
+        <div class="contenedor">
+
+            <img
+                src="img/logo.png"
+                alt="Cookie Monster Sports"
+                class="logo"
+            >
+
+            <h1>Cookie Monster Sports</h1>
+
+            <input
+                type="search"
+                id="busqueda"
+                placeholder="Buscar producto..."
+                autocomplete="off"
+            >
 
         </div>
-
-        <h1>CookieMonster Sports</h1>
-
-        <p class="subtitulo">
-
-            Premium Jerseys Catalog
-
-        </p>
-
-        <input
-            id="buscar"
-            type="search"
-            placeholder="Buscar equipo o modelo...">
 
     </header>
 
 
-    <main>
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
 
-<section id="contenedor-productos">
+    <main class="contenedor">
 
-    <!-- Tarjeta de ejemplo -->
+        <section id="catalogo" class="catalogo">
 
-    <article class="tarjeta-producto">
+            <!--
+                Las tarjetas serán creadas
+                automáticamente por app.js
+            -->
 
-        <div class="imagen-producto">
-
-            <img
-                src="https://picsum.photos/800/1000"
-                alt="Producto de ejemplo">
-
-        </div>
-
-        <div class="informacion-producto">
-
-            <h2>Real Madrid</h2>
-
-            <p>25/26 Home Player</p>
-
-        </div>
-
-    </article>
-
-</section>
+        </section>
 
     </main>
 
 
-    <footer>
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
 
-        © CookieMonster Sports
+    <footer class="footer">
+
+        <p>
+            © 2026 Cookie Monster Sports
+        </p>
 
     </footer>
 
@@ -82,5 +80,4 @@
     <script src="js/app.js"></script>
 
 </body>
-
 </html>
