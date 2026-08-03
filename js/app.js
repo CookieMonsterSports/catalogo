@@ -1,26 +1,87 @@
-const catalogo=document.getElementById("catalogo");
+/*
+=====================================================
+Cookie Monster Sports
+Archivo: app.js
+Versión: 0.3
+=====================================================
+*/
 
-catalogo.innerHTML=`
+let productos = [];
 
-<div style="
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,.15);
-">
 
-<img
-src="https://picsum.photos/400/500"
-style="width:100%;display:block;">
+/**
+ * Carga los productos desde el archivo JSON.
+ */
+async function cargarProductos() {
 
-<div style="padding:18px;">
+    try {
 
-<h3>Real Madrid</h3>
+        const respuesta =
+            await fetch("data/productos.json");
 
-<p>25/26 Home Player</p>
+        if (!respuesta.ok) {
+            throw new Error("No fue posible cargar los productos.");
+        }
 
-</div>
+        productos = await respuesta.json();
 
-</div>
+        renderizarProductos(productos);
 
-`;
+    }
+    catch (error) {
+
+        console.error(error);
+
+        const catalogo =
+            document.getElementById("catalogo");
+
+        catalogo.innerHTML = `
+            <p class="mensaje-vacio">
+                Ocurrió un error al cargar el catálogo.
+            </p>
+        `;
+
+    }
+
+}
+
+
+/**
+ * Filtra los productos.
+ */
+function filtrarProductos(texto) {
+
+    const termino =
+        texto.toLowerCase().trim();
+
+    const resultado = productos.filter(producto =>
+
+        producto.nombre.toLowerCase().includes(termino) ||
+        producto.equipo.toLowerCase().includes(termino) ||
+        producto.categoria.toLowerCase().includes(termino) ||
+        producto.version.toLowerCase().includes(termino)
+
+    );
+
+    renderizarProductos(resultado);
+
+}
+
+
+/**
+ * Inicia la aplicación.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+
+    cargarProductos();
+
+    const buscador =
+        document.getElementById("busqueda");
+
+    buscador.addEventListener("input", (evento) => {
+
+        filtrarProductos(evento.target.value);
+
+    });
+
+});
