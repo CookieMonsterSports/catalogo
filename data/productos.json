@@ -1,1 +1,35 @@
+[
+  {
+    "id": "AME-2025-H-FAN-001",
+    "slug": "america-local-2025-fan",
 
+    "nombre": "Jersey Club América Local 2025",
+
+    "categoria": "jersey",
+    "deporte": "futbol",
+    "equipo": "club-america",
+    "marca": "nike",
+
+    "version": "fan",
+    "temporada": "2025",
+    "genero": "hombre",
+
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+
+    "imagenPrincipal": "img/productos/AME-2025-H-FAN-001-1.webp",
+
+    "galeria": [
+      "img/productos/AME-2025-H-FAN-001-1.webp",
+      "img/productos/AME-2025-H-FAN-001-2.webp",
+      "img/productos/AME-2025-H-FAN-001-3.webp"
+    ],
+
+    "destacado": true,
+    "activo": true
+  }
+]
